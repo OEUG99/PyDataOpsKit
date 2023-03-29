@@ -5,7 +5,7 @@ with open('requirements.txt') as f:
 
 setup(
     name='PyDataOpsKit',
-    version='1.1.1',
+    version='1.0.0',
     packages=['PyDataOpsKit'],
     url='',
     license='',
