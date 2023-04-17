@@ -1,4 +1,0 @@
-setuptools~=67.6.0
-boto3~=1.26.91
-botocore~=1.29.91
-mysql-connector-python~=8.0.32

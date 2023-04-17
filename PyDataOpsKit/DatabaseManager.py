@@ -19,7 +19,7 @@ class DatabaseManager:
         elif os.environ.get("ENVIRONMENT") == "TESTING":
             pass
         else:
-            self.strategy = SQLiteStrategy(":memory:")
+            self.strategy = SQLiteStrategy("test.db")
 
 
 
