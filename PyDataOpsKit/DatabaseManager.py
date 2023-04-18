@@ -2,7 +2,7 @@ import os
 from typing import TypeVar
 
 from . import AbstractDatabaseStrategy
-from .SQLiteStrategy import SQLiteStrategy
+from .MySQLStrategy import MySQLStrategy
 
 
 T = TypeVar('T', bound=AbstractDatabaseStrategy)
@@ -19,7 +19,11 @@ class DatabaseManager:
         elif os.environ.get("ENVIRONMENT") == "TESTING":
             pass
         else:
-            self.strategy = SQLiteStrategy("test.db")
+            self.strategy = MySQLStrategy("localhost",
+                                          3306,
+                                          "root",
+                                          os.getenv("MYSQL_ROOT_PASSWORD"),
+                                          os.getenv("MYSQL_DATABASE"))
 
 
 
