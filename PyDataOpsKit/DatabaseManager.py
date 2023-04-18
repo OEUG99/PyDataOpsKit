@@ -45,4 +45,4 @@ class DatabaseManager:
         self.strategy.close()
 
     def query(self, query, params=None):
-        self.strategy.query(query, params)
+        return self.strategy.query(query, params)
