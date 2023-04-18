@@ -1,6 +1,7 @@
 import mysql.connector
 from mysql.connector import Error
 
+
 class MySQLStrategy:
     def __init__(self, host, port, user, password, database):
         self.host = host
@@ -61,4 +62,3 @@ class MySQLStrategy:
         self.conn.commit()
         cur.close()
         return result
-

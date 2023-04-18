@@ -19,7 +19,7 @@ class DatabaseManager:
         elif os.environ.get("ENVIRONMENT") == "TESTING":
             pass
         else:
-            self.strategy = MySQLStrategy("localhost",
+            self.strategy = MySQLStrategy(os.getenv("MYSQL_IP"),
                                           3306,
                                           "root",
                                           os.getenv("MYSQL_ROOT_PASSWORD"),

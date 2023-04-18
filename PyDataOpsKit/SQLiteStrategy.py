@@ -11,6 +11,7 @@ class SQLiteStrategy:
     def connect(self):
         try:
             self.conn = sqlite3.connect(self.db_file)
+
             print(f"SQLite connection to '{self.db_file}' established successfully.")
         except Error as e:
             print("Error while connecting to SQLite:", e)
