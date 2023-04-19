@@ -4,8 +4,8 @@ from typing import TypeVar
 from . import AbstractDatabaseStrategy
 from .MySQLStrategy import MySQLStrategy
 
-
 T = TypeVar('T', bound=AbstractDatabaseStrategy)
+
 
 class DatabaseManager:
     def __init__(self, strategy: T = None):
@@ -24,9 +24,6 @@ class DatabaseManager:
                                           "root",
                                           os.getenv("MYSQL_ROOT_PASSWORD"),
                                           os.getenv("MYSQL_DATABASE"))
-
-
-
 
     def setStrategy(self, strategy: AbstractDatabaseStrategy):
         """
