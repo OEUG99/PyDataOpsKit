@@ -1,7 +1,13 @@
 from abc import ABC, abstractmethod
 
+from PyDataOpsKit.DatabaseManager import DatabaseManager
+
 
 class AbstractRepository(ABC):
+
+    def __init__(self):
+        self.db = DatabaseManager()
+        self.createTable()
 
     @abstractmethod
     def createTable(self):
