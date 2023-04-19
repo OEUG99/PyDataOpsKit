@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 class AbstractRepository(ABC):
 
     @abstractmethod
-    def create_table(self):
+    def createTable(self):
         """Create the table for the repository."""
         pass
 
@@ -29,6 +29,6 @@ class AbstractRepository(ABC):
         pass
 
     @abstractmethod
-    def get_all(self):
+    def getAll(self):
         """Get all objects from the repository."""
         pass
