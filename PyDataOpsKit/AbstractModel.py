@@ -2,7 +2,7 @@ import json
 from abc import ABC, abstractmethod
 
 
-class AbstractEntity(ABC):
+class AbstractModel(ABC):
     @abstractmethod
     def toDict(self) -> dict:
         """
