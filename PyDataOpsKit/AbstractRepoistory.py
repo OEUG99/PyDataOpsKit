@@ -32,3 +32,18 @@ class AbstractRepository(ABC):
     def getAll(self):
         """Get all objects from the repository."""
         pass
+
+    @abstractmethod
+    def getList(self, limit, offset=None):
+        """Get all objects from the repository."""
+        pass
+
+    @abstractmethod
+    def getCount(self):
+        """Get the number of objects in the database."""
+        pass
+
+    @abstractmethod
+    def getByAttribute(self, attribute):
+        """Get an object from the repository by an attribute."""
+        pass
