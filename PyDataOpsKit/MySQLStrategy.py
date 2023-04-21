@@ -1,8 +1,10 @@
 import mysql.connector
 from mysql.connector import Error
 
+from PyDataOpsKit import AbstractDatabaseStrategy
 
-class MySQLStrategy:
+
+class MySQLStrategy(AbstractDatabaseStrategy):
     def __init__(self, host, port, user, password, database):
         self.host = host
         self.port = port

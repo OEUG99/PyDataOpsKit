@@ -1,6 +1,5 @@
 import os
 from typing import TypeVar
-
 from . import AbstractDatabaseStrategy
 from .MySQLStrategy import MySQLStrategy
 
