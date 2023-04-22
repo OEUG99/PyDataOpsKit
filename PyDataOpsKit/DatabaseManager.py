@@ -2,6 +2,9 @@ import os
 from typing import TypeVar
 from . import AbstractDatabaseStrategy
 from .MySQLStrategy import MySQLStrategy
+from dotenv import load_dotenv
+
+load_dotenv()
 
 T = TypeVar('T', bound=AbstractDatabaseStrategy)
 
