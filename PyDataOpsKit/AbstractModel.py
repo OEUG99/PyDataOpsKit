@@ -3,6 +3,9 @@ from abc import ABC, abstractmethod
 
 
 class AbstractModel(ABC):
+    def __init__(self):
+        self.id = None
+
     @abstractmethod
     def toDict(self) -> dict:
         """
@@ -15,4 +18,4 @@ class AbstractModel(ABC):
         return json.dumps(self.toDict())
 
     def __repr__(self):
-        return f'<{__class__.__name__}>'
+        return self.id
